@@ -29,7 +29,7 @@ Example output (will always return an object):
         "addParenthesesWithDashes": "1-(234)-567-8901",
         "addDots": "1.234.567.8901",
         "addSlashes": "1/234/567/8901",
-        "addTrailingSlashes": "1 (234) 567-8901
+        "addTrailingSlashes": "1 (234) 567-8901"
         },
     "countryCodeRemoved": {
         "addParentheses": "(234) 567 8901",
