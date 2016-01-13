@@ -20,22 +20,22 @@ You can choose to either include the leading "1" at the beginning of the phone n
 Example output (will always return an object):
 ```json
 {
-    "original": 12345678901,
-    "removeInitialNumber": 2345678901,
-    "withPlus": +12345678901,
+    "original": "12345678901",
+    "removeInitialNumber": "2345678901",
+    "withPlus": "+12345678901",
     "countryCodeIntact": {
-        "addParentheses": 1 (234) 567 8901,
-        "addDashes": 1-234-567-8901,
-        "addParenthesesWithDashes": 1-(234)-567-8901,
-        "addDots": 1.234.567.8901,
-        "addSlashes": 1/234/567/8901
+        "addParentheses": "1 (234) 567 8901",
+        "addDashes": "1-234-567-8901",
+        "addParenthesesWithDashes": "1-(234)-567-8901",
+        "addDots": "1.234.567.8901",
+        "addSlashes": "1/234/567/8901"
         },
     "countryCodeRemoved": {
-        "addParentheses": (234) 567 8901,
-        "addDashes": 234-567-8901,
-        "addParenthesesWithDashes": (234)-567-8901,
-        "addDots": 234.567.8901,
-        "addSlashes": 234/567/8901
+        "addParentheses": "(234) 567 8901",
+        "addDashes": "234-567-8901",
+        "addParenthesesWithDashes": "(234)-567-8901",
+        "addDots": "234.567.8901",
+        "addSlashes": "234/567/8901"
         }
 }
 ```
