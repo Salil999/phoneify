@@ -138,6 +138,4 @@ function phoneParsing(number) {
     // Validate it as JSON
     return JSON.parse(JSON.stringify(parsed));
 }
-var x = 8478044128;
-console.log(phoneParsing(x));
 module.exports = phoneParsing;
