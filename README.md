@@ -28,14 +28,16 @@ Example output (will always return an object):
         "addDashes": "1-234-567-8901",
         "addParenthesesWithDashes": "1-(234)-567-8901",
         "addDots": "1.234.567.8901",
-        "addSlashes": "1/234/567/8901"
+        "addSlashes": "1/234/567/8901",
+        "addTrailingSlashes": "1 (234) 567-8901
         },
     "countryCodeRemoved": {
         "addParentheses": "(234) 567 8901",
         "addDashes": "234-567-8901",
         "addParenthesesWithDashes": "(234)-567-8901",
         "addDots": "234.567.8901",
-        "addSlashes": "234/567/8901"
+        "addSlashes": "234/567/8901",
+        "addTrailingSlashes": "(234) 567-8901"
         }
 }
 ```

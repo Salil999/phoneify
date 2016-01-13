@@ -2,6 +2,10 @@ function phoneParsing(number) {
 	// checks whether there is a 1 or not at beginning
 	number = number.toString();
     number = number.split('');
+    if(number.length < 10 || number.length > 11) {
+    	console.log('ERROR: Length of input not valid');
+    	return null;
+    }
 	if(number.length == 10) {
 		number.unshift('1');
 	}
@@ -108,6 +112,26 @@ function phoneParsing(number) {
         return number.join('');
     }
 
+    function addTrailingSlashesNoSpaceFunc(number) {
+    	number = noSpacesFunc(number);
+    	number = number.split('');
+    	if(number.length == 11) {
+    		number.splice(1, 0, '(');
+    		number.splice(5, 0, ')');
+    		number.splice(6, 0, ' ');
+    		number.splice(1, 0, ' ');
+    		number.splice(11, 0, '-');
+    	} else if (number.length == 10) {
+    		number.splice(0, 0, '(');
+    		number.splice(4, 0, ')');
+    		number.splice(5, 0, ' ');
+    		number.splice(9, 0, '-');
+    	} else {
+    		return null;
+    	}
+    	return number.join('');
+    }
+
     // This is for the 'countryCodeRemoved' object
     var removed = removeInitialNumberFunc(number);
     var removedParentheses = addParenthesesFunc(removed);
@@ -115,6 +139,7 @@ function phoneParsing(number) {
     var removedParenAndDashes = addParenthesesWithDashesFunc(removed);
     var removedDots = addDotsFunc(removed);
     var removedSlashes = addSlashesFunc(removed);
+    var removedTrailingSlashes = addTrailingSlashesNoSpaceFunc(removed);
     // The object that will be returned
     var parsed = {
     	"original": number,
@@ -125,14 +150,16 @@ function phoneParsing(number) {
     		"addDashes": addDashesFunc(number),
     		"addParenthesesWithDashes": addParenthesesWithDashesFunc(number),
     		"addDots": addDotsFunc(number),
-    		"addSlashes": addSlashesFunc(number)
+    		"addSlashes": addSlashesFunc(number),
+    		"addTrailingSlashes": addTrailingSlashesNoSpaceFunc(number)
     	},
     	"countryCodeRemoved": {
     		"addParentheses": removedParentheses,
     		"addDashes": removedDashes,
     		"addParenthesesWithDashes": removedParenAndDashes,
     		"addDots": removedDots,
-    		"addSlashes": removedSlashes
+    		"addSlashes": removedSlashes,
+    		"addTrailingSlashes": removedTrailingSlashes
     	}
     };
     // Validate it as JSON
