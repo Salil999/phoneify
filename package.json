@@ -1,6 +1,6 @@
 {
   "name": "phoneify",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A simple tool that can parse inputs to a proper, readable \"phone\" type format.",
   "main": "phoneify.js",
   "scripts": {
