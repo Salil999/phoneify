@@ -1,0 +1,35 @@
+{
+  "name": "phoneify",
+  "version": "1.0.0",
+  "description": "A simple tool that can parse inputs to a proper, readable \"phone\" type format.",
+  "main": "phoneify.js",
+  "scripts": {
+    "test": "node phoneify.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Salil999/phony.git"
+  },
+  "keywords": [
+    "phone",
+    "validate",
+    "validation",
+    "cellphone",
+    "number",
+    "phonenumber",
+    "parser",
+    "parse",
+    "parsing",
+    "string",
+    "formatter",
+    "format",
+    "formatting",
+    "validating"
+  ],
+  "author": "Shashank Saxena <ssaxen4@illinois.edu> (http://shashanksaxena.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Salil999/phony/issues"
+  },
+  "homepage": "https://github.com/Salil999/phony#readme"
+}
