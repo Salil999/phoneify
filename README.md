@@ -11,9 +11,9 @@ $ npm install phoneify
 ## API Documentation:
 There's only one function implemented:
 ```js
-// input will be the phone number
+var phoneify = require('phoneify'); // phoneify is a function that takes one parameter
 var input = 12345678901;
-console.log(phoneify(input));
+console.log(phoneify(input)); // parameter will be the number
 ```
 You can choose to either include the leading "1" at the beginning of the phone number or leave it. But the length, initially, should be either 10 or 11 characters long.
 
@@ -40,5 +40,18 @@ Example output (will always return an object):
 }
 ```
 
+To access a specific format:
+```js
+var phoneify = require('phoneify');
+var input = 12345678901;
+format = phoneify(input);
+console.log(format.withPlus);
+console.log(format.countryCodeRemoved.addParenthesesWithDashes);
+```
+Output:
+```
++12345678901
+(234)-567-8901
+```
 ## License
 MIT.
