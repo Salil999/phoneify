@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Salil999/phony.git"
+    "url": "git+https://github.com/Salil999/phoneify.git"
   },
   "keywords": [
     "phone",
@@ -29,7 +29,7 @@
   "author": "Shashank Saxena <ssaxen4@illinois.edu> (http://shashanksaxena.me)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Salil999/phony/issues"
+    "url": "https://github.com/Salil999/phoneify/issues"
   },
-  "homepage": "https://github.com/Salil999/phony#readme"
+  "homepage": "https://github.com/Salil999/phoneify#readme"
 }
