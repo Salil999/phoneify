@@ -140,18 +140,26 @@ function phoneParsing(number) {
     var removedDots = addDotsFunc(removed);
     var removedSlashes = addSlashesFunc(removed);
     var removedTrailingSlashes = addTrailingSlashesNoSpaceFunc(removed);
+
+    //This is for the 'countryCodeIntact' object
+    var addParentheses = addParenthesesFunc(number);
+    var addDashes = addDashesFunc(number);
+    var addParenthesesWithDashes = addParenthesesWithDashesFunc(number);
+    var addDots = addDotsFunc(number);
+    var addSlashes = addSlashesFunc(number);
+    var addTrailingSlashes = addTrailingSlashesNoSpaceFunc(number);
     // The object that will be returned
     var parsed = {
     	"original": number,
-    	"removeInitialNumber": removeInitialNumberFunc(number),
+    	"removeInitialNumber": removed,
     	"withPlus": '+' + number,
     	"countryCodeIntact": {
-    		"addParentheses": addParenthesesFunc(number),
-    		"addDashes": addDashesFunc(number),
-    		"addParenthesesWithDashes": addParenthesesWithDashesFunc(number),
-    		"addDots": addDotsFunc(number),
-    		"addSlashes": addSlashesFunc(number),
-    		"addTrailingSlashes": addTrailingSlashesNoSpaceFunc(number)
+    		"addParentheses": addParentheses,
+    		"addDashes": addDashes,
+    		"addParenthesesWithDashes": addParenthesesWithDashes,
+    		"addDots": addDots,
+    		"addSlashes": addSlashes,
+    		"addTrailingSlashes": addTrailingSlashes
     	},
     	"countryCodeRemoved": {
     		"addParentheses": removedParentheses,
@@ -162,7 +170,7 @@ function phoneParsing(number) {
     		"addTrailingSlashes": removedTrailingSlashes
     	}
     };
-    // Validate it as JSON
-    return JSON.parse(JSON.stringify(parsed));
+
+    return parsed;
 }
 module.exports = phoneParsing;
