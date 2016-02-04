@@ -149,28 +149,27 @@ function phoneParsing(number) {
     var addSlashes = addSlashesFunc(number);
     var addTrailingSlashes = addTrailingSlashesNoSpaceFunc(number);
     // The object that will be returned
-    var parsed = {
-    	"original": number,
-    	"removeInitialNumber": removed,
-    	"withPlus": '+' + number,
-    	"countryCodeIntact": {
-    		"addParentheses": addParentheses,
-    		"addDashes": addDashes,
-    		"addParenthesesWithDashes": addParenthesesWithDashes,
-    		"addDots": addDots,
-    		"addSlashes": addSlashes,
-    		"addTrailingSlashes": addTrailingSlashes
+    return parsed = {
+        original: number,
+    	removeInitialNumber: removed,
+    	withPlus: '+' + number,
+    	countryCodeIntact: {
+    		addParentheses: addParentheses,
+    		addDashes: addDashes,
+    		addParenthesesWithDashes: addParenthesesWithDashes,
+    		addDots: addDots,
+    		addSlashes: addSlashes,
+    		addTrailingSlashes: addTrailingSlashes
     	},
-    	"countryCodeRemoved": {
-    		"addParentheses": removedParentheses,
-    		"addDashes": removedDashes,
-    		"addParenthesesWithDashes": removedParenAndDashes,
-    		"addDots": removedDots,
-    		"addSlashes": removedSlashes,
-    		"addTrailingSlashes": removedTrailingSlashes
+    	countryCodeRemoved: {
+    		addParentheses: removedParentheses,
+    		addDashes: removedDashes,
+    		addParenthesesWithDashes: removedParenAndDashes,
+    		addDots: removedDots,
+    		addSlashes: removedSlashes,
+    		addTrailingSlashes: removedTrailingSlashes
     	}
     };
-
-    return parsed;
 }
+
 module.exports = phoneParsing;
